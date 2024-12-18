@@ -32,16 +32,6 @@ include 'db.php';
          <div id="user-btn" class="fas fa-user"></div>
          <div id="toggle-btn" class="fas fa-sun"></div>
       </div>
-      <div class="profile">
-         <img src="images/pic-1.jpg" class="image" alt="">
-         <h3 class="name">Eranda</h3>
-         <p class="role">student</p>
-         <a href="profile.php" class="btn">view profile</a>
-         <div class="flex-btn">
-            <a href="login.php" class="option-btn">login</a>
-            <a href="register.php" class="option-btn">register</a>
-         </div>
-      </div>
    </section>
 </header>   
 
@@ -49,19 +39,12 @@ include 'db.php';
    <div id="close-btn">
       <i class="fas fa-times"></i>
    </div>
-   <div class="profile">
-      <img src="images/pic-1.jpg" class="image" alt="">
-      <h3 class="name">shaikh anas</h3>
-      <p class="role">student</p>
-      <a href="profile.php" class="btn">view profile</a>
-   </div>
    <nav class="navbar">
       <a href="home.php"><i class="fas fa-home"></i><span>home</span></a>
       <a href="about.php"><i class="fas fa-question"></i><span>about</span></a>
       <a href="courses.php"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
       <a href="teachers.php"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
       <a href="contact.php"><i class="fas fa-headset"></i><span>contact us</span></a>
-      <a href="contact.php"><i class="fas fa-headset"></i><span>Chat/Call with friends</span></a>
    </nav>
 </div>
 
@@ -82,10 +65,10 @@ include 'db.php';
                $_SESSION['user'] = $user['username'];
                header("Location: home.php");
            } else {
-               echo "<p class='error'>Invalid credentials!</p>";
+               echo "<script>alert('Invalid credentials! Please try again.');</script>";
            }
        } else {
-           echo "<p class='error'>No user found!</p>";
+           echo "<script>alert('No user found with this email!');</script>";
        }
    }
    ?>
